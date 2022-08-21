@@ -1,0 +1,28 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-items {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 41px;
+}
+
+.land {
+  color: #dde1e6;
+}
+
+.title {
+  color: #878d96;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.date {
+  color: #878d96;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+}

@@ -1,0 +1,118 @@
+export const cityData: {
+  id: number;
+  name: string;
+  status: string;
+  critical: number;
+  criticalValue: number;
+  location: string;
+  size: number;
+}[] = [
+  {
+    id: 1,
+    name: "Kansai Airport",
+    status: "Observe",
+    critical: 12,
+    criticalValue: -3,
+    location: "Japan",
+    size: 38.34,
+  },
+  {
+    id: 2,
+    name: "Miyazaki",
+    status: "Safe",
+    critical: 2,
+    criticalValue: 0,
+    location: "Japan",
+    size: 28.34,
+  },
+  {
+    id: 3,
+    name: "Tokyo",
+    status: "Safe",
+    critical: 5,
+    criticalValue: +1,
+    location: "Japan",
+    size: 58.34,
+  },
+  {
+    id: 4,
+    name: "Changi airport",
+    status: "Critical",
+    critical: 44,
+    criticalValue: -12,
+    location: "Japan",
+    size: 138.34,
+  },
+  {
+    id: 5,
+    name: "Incheon",
+    status: "Safe",
+    critical: 12,
+    criticalValue: -1,
+    location: "Japan",
+    size: 8.34,
+  },
+  {
+    id: 6,
+    name: "Nagano",
+    status: "Safe",
+    critical: 23,
+    criticalValue: -2,
+    location: "Japan",
+    size: 0.34,
+  },
+  {
+    id: 7,
+    name: "Mie 1",
+    status: "Critical",
+    critical: 356,
+    criticalValue: -65,
+    location: "Japan",
+    size: 38,
+  },
+  {
+    id: 8,
+    name: "Mie 2",
+    status: "Observe",
+    critical: 52,
+    criticalValue: +2,
+    location: "Japan",
+    size: 38.34,
+  },
+  {
+    id: 9,
+    name: "Ikebokuro Station",
+    status: "Observe",
+    critical: 57,
+    criticalValue: 0,
+    location: "Japan",
+    size: 4.2,
+  },
+  {
+    id: 10,
+    name: "New Caledonia",
+    status: "Safe",
+    critical: 7,
+    criticalValue: -1,
+    location: "Japan",
+    size: 6.9,
+  },
+  {
+    id: 11,
+    name: "Kumamoto",
+    status: "Safe",
+    critical: 11,
+    criticalValue: +4,
+    location: "Japan",
+    size: 358.34,
+  },
+  {
+    id: 12,
+    name: "Roppongi",
+    status: "Observe",
+    critical: 100,
+    criticalValue: -4,
+    location: "Japan",
+    size: 318.34,
+  },
+];

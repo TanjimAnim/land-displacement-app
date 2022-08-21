@@ -1,0 +1,19 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: #121619;
+  min-height: 99vh;
+}
+
+.top-items {
+  display: flex;
+  flex-direction: column;
+  padding: 0.1rem;
+  gap: 22px;
+}
+
+.bottom-items {
+  display: flex;
+}
