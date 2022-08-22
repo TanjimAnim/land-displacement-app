@@ -56,6 +56,7 @@ function AoiList() {
   const dispatch = useDispatch();
 
   const [area, setArea] = useState(cityData);
+  const [isTooltipToggled, setIsTooltipToggled] = useState(false);
 
   const handleChange = (value: string) => {
     setArea(
@@ -92,7 +93,10 @@ function AoiList() {
         <tbody>
           {area.map((item) => {
             return (
-              <tr onClick={() => dispatch(addArea(item))}>
+              <tr
+                onClick={() => dispatch(addArea(item))}
+                onMouseEnter={() => setIsTooltipToggled(!isTooltipToggled)}
+              >
                 <td>{item.name}</td>
                 <td>
                   <div className='status'>
@@ -147,7 +151,7 @@ function AoiList() {
           })}
         </tbody>
       </table>
-      <div className='tooltip-box'>
+      <div className={"tooltip-box" + (isTooltipToggled ? " toggled" : "")}>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
           sit eligendi quae rem, exercitationem at aut modi ut fugiat, odio

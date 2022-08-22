@@ -83,6 +83,12 @@
   width: 230px;
   padding: 8px 8px;
   text-align: justify;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.tooltip-box.toggled {
+  visibility: visible;
 }
 
 .aoi-table tr th {
