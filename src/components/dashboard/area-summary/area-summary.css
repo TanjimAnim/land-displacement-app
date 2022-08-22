@@ -1,0 +1,43 @@
+.area-summary-wrapper {
+  display: flex;
+}
+
+.area-summary-box {
+  margin-top: 24px;
+  border-right: 1px solid #343a3f;
+  padding-right: 52px;
+  margin-left: 40px;
+}
+
+.area-summary-box:nth-child(4) {
+  border-right: none;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #f2f4f8;
+}
+
+.area-summary-p {
+  font-weight: 400;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.area-summary-status {
+  display: flex;
+}
+
+.area-summary-status-title {
+  font-weight: 400;
+  font-size: 25px;
+  color: #ffffff;
+  line-height: 0px;
+}
+
+.area-summary-status-dot {
+  width: 40px;
+}
