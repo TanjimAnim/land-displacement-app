@@ -2,6 +2,8 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../../../app/store";
 import "./area-summary.css";
 import { Dot } from "@styled-icons/bootstrap/Dot";
+import { EditAlt } from "@styled-icons/boxicons-regular/EditAlt";
+import { useState } from "react";
 
 function AreaSummary() {
   const area = useSelector((state: RootState) => state.area);
@@ -41,13 +43,23 @@ function AreaSummary() {
             })()}
           </div>
         </div>
-
         <div className='area-summary-box'>
           <h3>Size</h3>
           <p className='area-summary-p'>
             {area.value.size} <span style={{ fontSize: "14px" }}>km2</span>
           </p>
         </div>
+      </div>
+      <div className='area-summary-edit-threshold'>
+        <p>Edit Threshold</p>
+        <EditAlt style={{ width: "16px" }} />
+      </div>
+      <div className='area-summary-link-wrapperr'>
+        <div className='area-summary-links'>Overview</div>
+        <div className='area-summary-links'>Ascending</div>
+        <div className='area-summary-links'>Descending</div>
+        <div className='area-summary-links'>Horizontal</div>
+        <div className='area-summary-links'>Vertical</div>
       </div>
     </>
   );
