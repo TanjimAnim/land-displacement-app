@@ -1,7 +1,8 @@
-function AreaGraphs() {
+function AreaGraphs({ title }: { title: string }) {
+  console.log("title", title);
   return (
     <>
-      <h3>Graphs</h3>
+      <h3>{title}</h3>
     </>
   );
 }

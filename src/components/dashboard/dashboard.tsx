@@ -19,7 +19,7 @@ function Dashboard() {
           <AoiList />
         </div>
         <div className='grid-item-four'>
-          <AreaGraphs />
+          <AreaGraphs title={""} />
         </div>
       </div>
     </>
