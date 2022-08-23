@@ -1,13 +1,19 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../app/store";
 import "./area-summary.css";
 import { Dot } from "@styled-icons/bootstrap/Dot";
 import { EditAlt } from "@styled-icons/boxicons-regular/EditAlt";
-import { useState } from "react";
+import { setSelectedLink } from "../../../features/slice";
 
 function AreaSummary() {
   const area = useSelector((state: RootState) => state.area);
+  const dispatch = useDispatch();
 
+  const handleClick: any = (e: any) => {
+    const target = e.target as HTMLInputElement;
+    console.log(target.innerHTML);
+    dispatch(setSelectedLink(target.innerHTML));
+  };
   return (
     <>
       <div className='area-summary-wrapper'>
@@ -55,11 +61,46 @@ function AreaSummary() {
         <EditAlt style={{ width: "16px" }} />
       </div>
       <div className='area-summary-link-wrapperr'>
-        <div className='area-summary-links'>Overview</div>
-        <div className='area-summary-links'>Ascending</div>
-        <div className='area-summary-links'>Descending</div>
-        <div className='area-summary-links'>Horizontal</div>
-        <div className='area-summary-links'>Vertical</div>
+        <div
+          className='area-summary-links'
+          onClick={(e) => {
+            handleClick(e);
+          }}
+        >
+          Overview
+        </div>
+        <div
+          className='area-summary-links'
+          onClick={(e) => {
+            handleClick(e);
+          }}
+        >
+          Ascending
+        </div>
+        <div
+          className='area-summary-links'
+          onClick={(e) => {
+            handleClick(e);
+          }}
+        >
+          Descending
+        </div>
+        <div
+          className='area-summary-links'
+          onClick={(e) => {
+            handleClick(e);
+          }}
+        >
+          Horizontal
+        </div>
+        <div
+          className='area-summary-links'
+          onClick={(e) => {
+            handleClick(e);
+          }}
+        >
+          Vertical
+        </div>
       </div>
     </>
   );
