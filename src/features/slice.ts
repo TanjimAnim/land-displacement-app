@@ -2,10 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export interface AreaState {
   value: any;
+  selectedLink: string;
 }
 
 const initialState: AreaState = {
   value: [],
+  selectedLink: "",
 };
 
 export const areaSlice = createSlice({
@@ -15,8 +17,11 @@ export const areaSlice = createSlice({
     addArea: (state, action) => {
       state.value = action.payload;
     },
+    setSelectedLink: (state, action) => {
+      state.selectedLink = action.payload;
+    },
   },
 });
 
-export const { addArea } = areaSlice.actions;
+export const { addArea, setSelectedLink } = areaSlice.actions;
 export default areaSlice.reducer;
