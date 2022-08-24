@@ -12,7 +12,7 @@ function AoiSummary() {
   var safeCount: object[] = cityData.filter((item) => item.status === "safe");
 
   //color pallete for pie chart
-  var colorPalette = ["#24A148", "#F1C21B", "#DA1E28"];
+  var colorPalette: string[] = ["#24A148", "#F1C21B", "#DA1E28"];
 
   const option = {
     tooltip: {
