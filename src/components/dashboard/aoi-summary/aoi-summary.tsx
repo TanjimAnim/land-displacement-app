@@ -4,13 +4,14 @@ import "./aoi-summary.css";
 
 function AoiSummary() {
   var criticalCount: object[] = cityData.filter(
-    (item) => item.status === "critical"
+    (item) => item.status.toLowerCase() === "critical"
   );
   var observeCount: object[] = cityData.filter(
-    (item) => item.status === "observe"
+    (item) => item.status.toLowerCase() === "observe"
   );
-  var safeCount: object[] = cityData.filter((item) => item.status === "safe");
-
+  var safeCount: object[] = cityData.filter(
+    (item) => item.status.toLowerCase() === "safe"
+  );
   //color pallete for pie chart
   var colorPalette: string[] = ["#24A148", "#F1C21B", "#DA1E28"];
 
