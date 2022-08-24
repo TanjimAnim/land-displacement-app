@@ -1,6 +1,7 @@
 import TimePeriod from "./timeperiod";
 import styled from "styled-components";
 import SingleGraph from "./singleGraph";
+import MultiGraph from "./multiGraph";
 
 const SlopeValueWrapper = styled.div`
   padding-left: 64px;
@@ -78,6 +79,7 @@ function SlopeValue({
           </TimePeriodWrapper>
         </Data>
         <SingleGraph />
+        <MultiGraph />
       </SlopeValueWrapper>
     </>
   );
