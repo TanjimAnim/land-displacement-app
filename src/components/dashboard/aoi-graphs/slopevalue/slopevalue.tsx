@@ -49,11 +49,15 @@ function SlopeValue({
   maxUp,
   maxDown,
   average,
+  avgTotalDisplacement,
+  displacementRate,
 }: {
   title: string;
-  maxUp: number;
-  maxDown: number;
-  average: number;
+  maxUp?: number;
+  maxDown?: number;
+  average?: number;
+  avgTotalDisplacement?: number;
+  displacementRate?: number;
 }) {
   return (
     <>
@@ -61,18 +65,33 @@ function SlopeValue({
         <Title>{title}</Title>
         <Data>
           <SlopeData>
-            <div>
-              <SlopeDataTitle>Max Upward</SlopeDataTitle>
-              <SlopeDataValue>{maxUp} mm</SlopeDataValue>
-            </div>
-            <div>
-              <SlopeDataTitle>Max Downward</SlopeDataTitle>
-              <SlopeDataValue>{maxDown} mm</SlopeDataValue>
-            </div>
-            <div>
-              <SlopeDataTitle>Average</SlopeDataTitle>
-              <SlopeDataValue>{average} mm/year</SlopeDataValue>
-            </div>
+            {maxUp && maxDown && average ? (
+              <>
+                <div>
+                  <SlopeDataTitle>Max Upward</SlopeDataTitle>
+                  <SlopeDataValue>{maxUp} mm</SlopeDataValue>
+                </div>
+                <div>
+                  <SlopeDataTitle>Max Downward</SlopeDataTitle>
+                  <SlopeDataValue>{maxDown} mm</SlopeDataValue>
+                </div>
+                <div>
+                  <SlopeDataTitle>Average</SlopeDataTitle>
+                  <SlopeDataValue>{average} mm/year</SlopeDataValue>
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <SlopeDataTitle>Avg Total Displacement</SlopeDataTitle>
+                  <SlopeDataValue>{avgTotalDisplacement} mm</SlopeDataValue>
+                </div>
+                <div>
+                  <SlopeDataTitle>Displacement Rate</SlopeDataTitle>
+                  <SlopeDataValue>{displacementRate} mm</SlopeDataValue>
+                </div>
+              </>
+            )}
           </SlopeData>
           <TimePeriodWrapper>
             <TimePeriod />
