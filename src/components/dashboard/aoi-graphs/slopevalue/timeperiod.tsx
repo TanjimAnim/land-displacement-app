@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Location } from "@styled-icons/entypo/Location";
+import { ThemeProvider } from "styled-components";
 
 const Title = styled.div`
   font-weight: 400;
@@ -11,11 +12,12 @@ const Title = styled.div`
 const TimePeriodStyle = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-direction: ${(props) => props.theme.flexDirection};
   margin-top: 8px;
 `;
 
 const Select = styled.select`
-  width: 58%;
+  width: ${(props) => props.theme.selectWidth};
   height: 35px;
   background: #21272a;
   color: #f2f4f8;
@@ -38,30 +40,32 @@ const MapDisplay = styled.div`
   justify-content: space-between;
   border: 1px solid #f2f4f8;
   padding: 0.1rem;
-  width: 31%;
-  margin-top: -18px;
+  width: ${(props) => props.theme.viewMapWidth};
+  margin-top: ${(props) => props.theme.marginTop}; ;
 `;
 
-function TimePeriod() {
+function TimePeriod({ theme }: { theme: object }) {
   return (
     <>
       <Title>Time Period</Title>
-      <TimePeriodStyle>
-        <Select>
-          <option value='' hidden>
-            Type
-          </option>
-          <option value='1'>1 year</option>
-          <option value='2'>1 month</option>
-          <option value='3'>1 week</option>
-          <option value='4'>1 day</option>
-        </Select>
+      <ThemeProvider theme={theme}>
+        <TimePeriodStyle>
+          <Select>
+            <option value='' hidden>
+              Type
+            </option>
+            <option value='1'>1 year</option>
+            <option value='2'>1 month</option>
+            <option value='3'>1 week</option>
+            <option value='4'>1 day</option>
+          </Select>
 
-        <MapDisplay>
-          <p>View In Map</p>
-          <Location style={{ width: "16px" }} />
-        </MapDisplay>
-      </TimePeriodStyle>
+          <MapDisplay>
+            <p>View In Map</p>
+            <Location style={{ width: "16px" }} />
+          </MapDisplay>
+        </TimePeriodStyle>
+      </ThemeProvider>
     </>
   );
 }

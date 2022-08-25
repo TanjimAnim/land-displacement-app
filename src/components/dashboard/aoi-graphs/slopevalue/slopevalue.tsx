@@ -94,7 +94,14 @@ function SlopeValue({
             )}
           </SlopeData>
           <TimePeriodWrapper>
-            <TimePeriod />
+            <TimePeriod
+              theme={{
+                flexDirection: "row",
+                marginTop: "-18px",
+                selectWidth: "58%",
+                viewMapWidth: "31%",
+              }}
+            />
           </TimePeriodWrapper>
         </Data>
         <SingleGraph />
