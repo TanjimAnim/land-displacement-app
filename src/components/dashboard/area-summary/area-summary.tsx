@@ -11,7 +11,6 @@ function AreaSummary() {
 
   const handleClick: any = (e: any) => {
     const target = e.target as HTMLInputElement;
-    console.log(target.innerHTML);
     dispatch(setSelectedLink(target.innerHTML));
   };
   return (
