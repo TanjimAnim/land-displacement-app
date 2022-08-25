@@ -1,6 +1,15 @@
 import ReactEcharts from "echarts-for-react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../app/store";
 
 function SingleGraph() {
+  const link = useSelector((state: RootState) => state.area.selectedLink);
+  var lineColor: string = "";
+  if (link === "Ascending") lineColor = "#FF7EB6";
+  if (link === "Descending") lineColor = "#8A3FFC";
+  if (link === "Vertical") lineColor = "#FF7EB6";
+  if (link === "Horizontal") lineColor = "#eb4034";
+
   interface DataItem {
     name: string;
     value: [string, number];
@@ -74,6 +83,7 @@ function SingleGraph() {
         type: "line",
         showSymbol: false,
         data: data,
+        lineStyle: { color: lineColor },
       },
     ],
   };
