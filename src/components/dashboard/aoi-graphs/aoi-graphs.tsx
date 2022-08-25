@@ -4,7 +4,7 @@ import SlopeValue from "../aoi-graphs/slopevalue/slopevalue";
 
 function AreaGraphs() {
   const link = useSelector((state: RootState) => state.area.selectedLink);
-  console.log(typeof link);
+
   return (
     <>
       {(() => {
@@ -28,6 +28,16 @@ function AreaGraphs() {
                 maxUp={60}
                 maxDown={-193}
                 average={-52}
+              />
+            </>
+          );
+        if (link === "Vertical" || "Horizontal")
+          return (
+            <>
+              <SlopeValue
+                title={link}
+                avgTotalDisplacement={-12}
+                displacementRate={-52}
               />
             </>
           );
