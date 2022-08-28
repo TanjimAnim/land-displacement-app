@@ -7,6 +7,7 @@ import { setSelectedLink } from "../../../features/slice";
 
 function AreaSummary() {
   const area = useSelector((state: RootState) => state.area);
+  const link = useSelector((state: RootState) => state.area.selectedLink);
   const dispatch = useDispatch();
 
   const handleClick: any = (e: any) => {
@@ -61,7 +62,7 @@ function AreaSummary() {
       </div>
       <div className='area-summary-link-wrapperr'>
         <div
-          className='area-summary-links'
+          className={link === "Overview" ? "select-link" : "area-summary-links"}
           onClick={(e) => {
             handleClick(e);
           }}
@@ -69,7 +70,9 @@ function AreaSummary() {
           Overview
         </div>
         <div
-          className='area-summary-links'
+          className={
+            link === "Ascending" ? "select-link" : "area-summary-links"
+          }
           onClick={(e) => {
             handleClick(e);
           }}
@@ -77,7 +80,9 @@ function AreaSummary() {
           Ascending
         </div>
         <div
-          className='area-summary-links'
+          className={
+            link === "Descending" ? "select-link" : "area-summary-links"
+          }
           onClick={(e) => {
             handleClick(e);
           }}
@@ -85,7 +90,9 @@ function AreaSummary() {
           Descending
         </div>
         <div
-          className='area-summary-links'
+          className={
+            link === "Horizontal" ? "select-link" : "area-summary-links"
+          }
           onClick={(e) => {
             handleClick(e);
           }}
@@ -93,7 +100,7 @@ function AreaSummary() {
           Horizontal
         </div>
         <div
-          className='area-summary-links'
+          className={link === "Vertical" ? "select-link" : "area-summary-links"}
           onClick={(e) => {
             handleClick(e);
           }}
