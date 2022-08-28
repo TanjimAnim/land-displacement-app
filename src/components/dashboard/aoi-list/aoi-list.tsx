@@ -2,6 +2,8 @@ import { cityData } from "../../../app/data";
 import "./aoi-list.css";
 import { useDispatch } from "react-redux";
 import { addArea } from "../../../features/slice";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../app/store";
 
 import styled from "styled-components";
 import { Search } from "@styled-icons/bootstrap/Search";
@@ -54,10 +56,10 @@ const Input = styled.input`
 
 function AoiList() {
   const dispatch = useDispatch();
-
+  const value = useSelector((state: RootState) => state.area.value);
   const [area, setArea] = useState(cityData);
   const [isTooltipToggled, setIsTooltipToggled] = useState(false);
-
+  console.log(value);
   const handleChange = (value: string) => {
     setArea(
       cityData.filter((item) => {
@@ -96,8 +98,11 @@ function AoiList() {
               <tr
                 onClick={() => dispatch(addArea(item))}
                 onMouseEnter={() => setIsTooltipToggled(!isTooltipToggled)}
+                className={value.id === item.id ? "select-row" : ""}
               >
-                <td>{item.name}</td>
+                <td className={value.id === item.id ? "select" : ""}>
+                  {item.name}
+                </td>
                 <td>
                   <div className='status'>
                     {(() => {

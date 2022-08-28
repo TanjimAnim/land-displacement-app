@@ -61,6 +61,12 @@
   padding: 1rem;
   cursor: pointer;
 }
+.select {
+  border-left: 5px solid #0f62fe;
+}
+.select-row {
+  background-color: #343a3f;
+}
 
 .aoi-table tbody tr:hover {
   background-color: #343a3f;
