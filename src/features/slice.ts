@@ -1,13 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { NotificationData } from "../app/notificationData";
 
 export interface AreaState {
   value: any;
   selectedLink: string;
+  notification: object[];
 }
 
 const initialState: AreaState = {
   value: [],
   selectedLink: "",
+  notification: NotificationData,
 };
 
 export const areaSlice = createSlice({
