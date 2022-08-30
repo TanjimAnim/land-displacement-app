@@ -21,11 +21,11 @@ function AoiSummary() {
     },
     color: colorPalette,
     legend: {
-      top: "25%",
+      top: "25px",
       right: "5px",
       orient: "vertical",
       icon: "rect",
-      itemGap: 40,
+      itemGap: 50,
       textStyle: {
         color: "#C1C7CD",
         fontWeight: "400",
@@ -34,8 +34,8 @@ function AoiSummary() {
     },
     title: {
       text: "12",
-      left: "center",
-      top: "center",
+      left: "85px",
+      top: "85px",
       textStyle: {
         color: "white",
         fontSize: "32px",
@@ -45,6 +45,7 @@ function AoiSummary() {
     series: [
       {
         type: "pie",
+        center: [110, 100],
         radius: ["45%", "40%"],
         avoidLabelOverlap: false,
 
@@ -81,7 +82,7 @@ function AoiSummary() {
     <>
       <h3 className='aoi-summary-title'>AOI Summary</h3>
       <div className='aoi-summary-chart'>
-        <ReactEcharts option={option} />
+        <ReactEcharts option={option} style={{ height: "250px" }} />
       </div>
     </>
   );
