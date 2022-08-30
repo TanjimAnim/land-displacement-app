@@ -23,8 +23,14 @@ export const areaSlice = createSlice({
     setSelectedLink: (state, action) => {
       state.selectedLink = action.payload;
     },
+    removeNotification: (state, action) => {
+      state.notification = state.notification.filter((item: any) => {
+        return item.id != action.payload;
+      });
+    },
   },
 });
 
-export const { addArea, setSelectedLink } = areaSlice.actions;
+export const { addArea, setSelectedLink, removeNotification } =
+  areaSlice.actions;
 export default areaSlice.reducer;
