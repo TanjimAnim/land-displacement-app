@@ -2,6 +2,12 @@ import { Search } from "@styled-icons/bootstrap/Search";
 import { UserCircle } from "@styled-icons/fa-regular/UserCircle";
 import styled from "styled-components";
 import { Bell } from "@styled-icons/bootstrap/Bell";
+import { ThemeProvider } from "styled-components";
+
+import { useSelector } from "react-redux";
+import type { RootState } from "../../app/store";
+
+import { useState } from "react";
 
 import NotificationWindow from "./notification";
 
@@ -95,9 +101,18 @@ const NotificationDisplay = styled.div`
   position: absolute;
   top: 51px;
   right: 0px;
+  overflow-y: ${(props) => (props.theme.length === 0 ? "hidden" : "scroll")};
+  height: 72vh;
 `;
 
 function Profile() {
+  const notification: object[] = useSelector(
+    (state: RootState) => state.area.notification
+  );
+  const theme = {
+    length: notification.length,
+  };
+  const [clicked, setClicked] = useState<Boolean>(false);
   return (
     <>
       <Wrapper>
@@ -108,11 +123,22 @@ function Profile() {
           </div>
         </SearchBar>
         <BellIcon>
-          <Bell />
-          <NotificationBadge></NotificationBadge>
-          <NotificationDisplay>
-            <NotificationWindow />
-          </NotificationDisplay>
+          <Bell
+            onClick={() => {
+              setClicked(!clicked);
+            }}
+          />
+          {notification.length === 0 ? <></> : <NotificationBadge />}
+
+          {clicked ? (
+            <ThemeProvider theme={theme}>
+              <NotificationDisplay>
+                <NotificationWindow />
+              </NotificationDisplay>
+            </ThemeProvider>
+          ) : (
+            <></>
+          )}
         </BellIcon>
         <UserProfileIcon>
           <UserCircle />
