@@ -22,7 +22,7 @@ function Sidebar() {
         <Link to='download'>
           <img src={downloadIcon} />
         </Link>
-        <Link to='profile'>
+        <Link to='/profile'>
           <img src={userProfileIcon} />
         </Link>
       </div>
