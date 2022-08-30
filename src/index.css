@@ -1,4 +1,6 @@
 body {
+  min-height: 100vh;
+  background: black;
   margin: 0;
   font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
