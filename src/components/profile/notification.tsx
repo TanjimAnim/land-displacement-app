@@ -17,7 +17,7 @@ const NotificationDayBar = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: #21272a;
-  color: #f2f4f8;
+  color: ${(props) => (props.color ? "#697077" : "#F2F4F8")};
   padding: 1rem;
 `;
 
@@ -67,7 +67,9 @@ function NotificationWindow() {
     <>
       {notification.length === 0 ? (
         <Wrapper>
-          <NotificationDayBar>No New Notification</NotificationDayBar>
+          <NotificationDayBar color='#697077'>
+            No New Notification
+          </NotificationDayBar>
         </Wrapper>
       ) : (
         <Wrapper>
