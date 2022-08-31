@@ -1,15 +1,45 @@
+import styled from "styled-components";
+
 import { Search } from "@styled-icons/bootstrap/Search";
 import { UserCircle } from "@styled-icons/fa-regular/UserCircle";
-import styled from "styled-components";
 import { Bell } from "@styled-icons/bootstrap/Bell";
 import { ThemeProvider } from "styled-components";
+import { Menu } from "@styled-icons/boxicons-regular/Menu";
+
+import NotificationWindow from "./notification";
+import ProfileMenu from "./profileMenu";
 
 import { useSelector } from "react-redux";
 import type { RootState } from "../../app/store";
-
 import { useState } from "react";
 
-import NotificationWindow from "./notification";
+const ProfileMenuWrapper = styled.div`
+  background-color: #121619;
+  width: 360px;
+  position: absolute;
+  min-height: 100vh;
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 18px;
+  transform: ${(props) =>
+    props.theme.isOpen ? "translateX(5px)" : "translateX(-109%)"};
+  transition: transform 0.5s ease-out;
+`;
+
+const MenuIcon = styled.div`
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  border: 1px solid;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  &:hover {
+    background: #21273a;
+    transform: rotate(90deg);
+  }
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -46,7 +76,6 @@ const Input = styled.input`
   width: 100%;
   border: none;
   outline: none;
-
   box-sizing: border-box;
   transition: 0.3s;
   padding-left: 47px;
@@ -100,9 +129,11 @@ const NotificationBadge = styled.div`
 const NotificationDisplay = styled.div`
   position: absolute;
   top: 51px;
-  right: 0px;
+  right: 66px;
   overflow-y: ${(props) => (props.theme.length === 0 ? "hidden" : "scroll")};
+  scroll-behavior: smooth;
   height: 72vh;
+  transition: top 0.5s ease-in;
 `;
 
 function Profile() {
@@ -112,9 +143,25 @@ function Profile() {
   const theme = {
     length: notification.length,
   };
+
   const [clicked, setClicked] = useState<Boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<Boolean>(false);
+  const MenuTheme = {
+    isOpen: isMenuOpen,
+  };
   return (
     <>
+      <MenuIcon
+        onClick={() => {
+          setIsMenuOpen(!isMenuOpen);
+        }}
+      >
+        <Menu width='25px' />
+      </MenuIcon>
+      <ProfileMenuWrapper theme={MenuTheme}>
+        <ProfileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      </ProfileMenuWrapper>
+
       <Wrapper>
         <SearchBar className={"inputWithIcon"}>
           <Input placeholder='Search' />
@@ -122,24 +169,23 @@ function Profile() {
             <Search width='16px' />
           </div>
         </SearchBar>
-        <BellIcon>
-          <Bell
-            onClick={() => {
-              setClicked(!clicked);
-            }}
-          />
+        <BellIcon
+          onClick={() => {
+            setClicked(!clicked);
+          }}
+        >
+          <Bell />
           {notification.length === 0 ? <></> : <NotificationBadge />}
-
-          {clicked ? (
-            <ThemeProvider theme={theme}>
-              <NotificationDisplay>
-                <NotificationWindow />
-              </NotificationDisplay>
-            </ThemeProvider>
-          ) : (
-            <></>
-          )}
         </BellIcon>
+        {clicked ? (
+          <ThemeProvider theme={theme}>
+            <NotificationDisplay>
+              <NotificationWindow />
+            </NotificationDisplay>
+          </ThemeProvider>
+        ) : (
+          <></>
+        )}
         <UserProfileIcon>
           <UserCircle />
         </UserProfileIcon>
