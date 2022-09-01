@@ -6,6 +6,8 @@ export const cityData: {
   criticalValue: number;
   location: string;
   size: number;
+  lat: number;
+  long: number;
 }[] = [
   {
     id: 1,
@@ -15,6 +17,8 @@ export const cityData: {
     criticalValue: -3,
     location: "Japan",
     size: 38.34,
+    lat: 34.432,
+    long: 135.2304,
   },
   {
     id: 2,
@@ -24,6 +28,8 @@ export const cityData: {
     criticalValue: 0,
     location: "Japan",
     size: 28.34,
+    lat: 31.9077,
+    long: 131.4202,
   },
   {
     id: 3,
@@ -33,6 +39,8 @@ export const cityData: {
     criticalValue: +1,
     location: "Japan",
     size: 58.34,
+    lat: 35.6762,
+    long: 139.6503,
   },
   {
     id: 4,
@@ -42,6 +50,8 @@ export const cityData: {
     criticalValue: -12,
     location: "Japan",
     size: 138.34,
+    lat: 1.3644,
+    long: 103.9915,
   },
   {
     id: 5,
@@ -51,6 +61,8 @@ export const cityData: {
     criticalValue: -1,
     location: "Japan",
     size: 8.34,
+    lat: 37.4563,
+    long: 126.7052,
   },
   {
     id: 6,
@@ -60,6 +72,8 @@ export const cityData: {
     criticalValue: -2,
     location: "Japan",
     size: 0.34,
+    lat: 36.6485,
+    long: 138.195,
   },
   {
     id: 7,
@@ -69,6 +83,8 @@ export const cityData: {
     criticalValue: -65,
     location: "Japan",
     size: 38,
+    lat: 33.8144,
+    long: 136.0487,
   },
   {
     id: 8,
@@ -78,6 +94,8 @@ export const cityData: {
     criticalValue: +2,
     location: "Japan",
     size: 38.34,
+    lat: 33.8144,
+    long: 136.0487,
   },
   {
     id: 9,
@@ -87,15 +105,19 @@ export const cityData: {
     criticalValue: 0,
     location: "Japan",
     size: 4.2,
+    lat: 35.7295,
+    long: 139.7109,
   },
   {
     id: 10,
-    name: "New Caledonia",
+    name: "Akihabara",
     status: "Safe",
     critical: 7,
     criticalValue: -1,
     location: "Japan",
     size: 6.9,
+    lat: 35.7023,
+    long: 139.7745,
   },
   {
     id: 11,
@@ -105,6 +127,8 @@ export const cityData: {
     criticalValue: +4,
     location: "Japan",
     size: 358.34,
+    lat: 32.8032,
+    long: 130.7079,
   },
   {
     id: 12,
@@ -114,5 +138,7 @@ export const cityData: {
     criticalValue: -4,
     location: "Japan",
     size: 318.34,
+    lat: 35.6619,
+    long: 139.7345,
   },
 ];
