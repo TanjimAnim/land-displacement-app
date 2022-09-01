@@ -8,6 +8,7 @@ import { Menu } from "@styled-icons/boxicons-regular/Menu";
 
 import NotificationWindow from "./notification";
 import ProfileMenu from "./profileMenu";
+import MapDisplay from "../map/mapDisplay";
 
 import { useSelector } from "react-redux";
 import type { RootState } from "../../app/store";
@@ -27,6 +28,7 @@ const ProfileMenuWrapper = styled.div`
 `;
 
 const MenuIcon = styled.div`
+  background-color: black;
   color: white;
   position: absolute;
   top: 20px;
@@ -136,7 +138,17 @@ const NotificationDisplay = styled.div`
   transition: top 0.5s ease-in;
 `;
 
+const MapTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+`;
+
 function Profile() {
+  const value = useSelector((state: RootState) => state.area.value);
   const notification: object[] = useSelector(
     (state: RootState) => state.area.notification
   );
@@ -190,6 +202,13 @@ function Profile() {
           <UserCircle />
         </UserProfileIcon>
       </Wrapper>
+      {value.length === 0 ? (
+        <>
+          <MapTitle>Select an AOI to display Map</MapTitle>
+        </>
+      ) : (
+        <MapDisplay />
+      )}
     </>
   );
 }
