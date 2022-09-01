@@ -8,18 +8,22 @@ function Dashboard() {
   return (
     <>
       <Topbar />
-      <div className='wrapper'>
-        <div className='grid-item-one'>
-          <AoiSummary />
+      <div className='grid-with-two-columns'>
+        <div className='left-column'>
+          <div className='column-1-row-1'>
+            <AoiSummary />
+          </div>
+          <div className='column-1-row-2'>
+            <AoiList />
+          </div>
         </div>
-        <div className='grid-item-two'>
-          <AreaSummary />
-        </div>
-        <div className='grid-item-three'>
-          <AoiList />
-        </div>
-        <div className='grid-item-four'>
-          <AreaGraphs />
+        <div className='right-column'>
+          <div className='column-2-row-1'>
+            <AreaSummary />
+          </div>
+          <div className='column-2-row-2'>
+            <AreaGraphs />
+          </div>
         </div>
       </div>
     </>
