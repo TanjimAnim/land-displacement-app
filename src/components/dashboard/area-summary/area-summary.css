@@ -66,6 +66,13 @@ h3 {
   border-bottom: 1px solid #a2a9b0;
   padding: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.area-summary-links:hover {
+  color: white;
+  border-bottom: 1px solid #0f62fe;
+  background-color: #343a3f;
 }
 
 .select-link {
