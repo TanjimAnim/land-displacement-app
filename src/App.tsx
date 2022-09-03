@@ -14,7 +14,7 @@ function App() {
       </div>
       <div className='display-pages'>
         <Routes>
-          <Route path='dashboard' element={<Dashboard />} />
+          <Route path='/' element={<Dashboard />} />
           <Route path='map' element={<Map />} />
           <Route path='profile' element={<Profile />} />
           <Route path='download' element={<Download />} />

@@ -12,7 +12,7 @@ function Sidebar() {
     <div className='sidebar'>
       <div className='top-items'>
         <img src={synspectiveIcon} />
-        <Link to='/dashboard'>
+        <Link to='/'>
           <img src={dashboardIcon} />
         </Link>
 
