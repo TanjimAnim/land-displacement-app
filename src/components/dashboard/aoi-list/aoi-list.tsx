@@ -58,8 +58,8 @@ function AoiList() {
   const dispatch = useDispatch();
   const value = useSelector((state: RootState) => state.area.value);
   const [area, setArea] = useState(cityData);
-  const [isTooltipToggled, setIsTooltipToggled] = useState(false);
-  console.log(value);
+  //const [isTooltipToggled, setIsTooltipToggled] = useState(false);
+
   const handleChange = (value: string) => {
     setArea(
       cityData.filter((item) => {
@@ -97,7 +97,8 @@ function AoiList() {
             return (
               <tr
                 onClick={() => dispatch(addArea(item))}
-                onMouseEnter={() => setIsTooltipToggled(!isTooltipToggled)}
+                // onMouseEnter={() => setIsTooltipToggled(true)}
+                // onMouseLeave={() => setIsTooltipToggled(false)}
                 className={value.id === item.id ? "select-row" : ""}
               >
                 <td className={value.id === item.id ? "select" : ""}>
@@ -151,19 +152,23 @@ function AoiList() {
                     }
                   })()}
                 </td>
+                <div
+                  className='tooltip-box'
+                  //</>{"tooltip-box" + (isTooltipToggled ? " toggled" : "")}
+                >
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusamus, sit eligendi quae rem, exercitationem at aut modi
+                    ut fugiat, odio alias quaerat! Sed similique ut libero quos
+                    temporibus. Eaque, illum?
+                  </p>
+                  <p style={{ color: "#4589FF" }}>Learn more....</p>
+                </div>
               </tr>
             );
           })}
         </tbody>
       </table>
-      <div className={"tooltip-box" + (isTooltipToggled ? " toggled" : "")}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
-          sit eligendi quae rem, exercitationem at aut modi ut fugiat, odio
-          alias quaerat! Sed similique ut libero quos temporibus. Eaque, illum?
-        </p>
-        <p style={{ color: "#4589FF" }}>Learn more....</p>
-      </div>
     </>
   );
 }

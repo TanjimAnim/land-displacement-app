@@ -66,6 +66,13 @@
 }
 .select-row {
   background-color: #343a3f;
+  z-index: -1;
+}
+
+.aoi-table tbody tr {
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.5s ease-out;
 }
 
 .aoi-table tbody tr:hover {
@@ -75,14 +82,17 @@
 .aoi-table tbody tr:hover td:nth-child(1) {
   border-left: 5px solid #0f62fe;
 }
-.aoi-table tbody tr:hover ~ .tooltip-box {
+
+.aoi-table tbody tr:hover .tooltip-box {
+  z-index: 3;
   visibility: visible;
 }
 
 .tooltip-box {
+  z-index: 999;
   visibility: hidden;
   position: absolute;
-  top: calc(100% + 10px);
+  top: 60px;
   left: 230px;
   color: #fff;
   background-color: #4d5358;
