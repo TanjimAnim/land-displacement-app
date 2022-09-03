@@ -105,7 +105,7 @@ const BellIcon = styled.div`
   cursor: pointer;
   transition: background 0.2s ease-in;
   &:hover {
-    background: #21273a;
+    background: #343a3f;
   }
 `;
 
