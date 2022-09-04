@@ -58,8 +58,6 @@ function AoiList() {
   const dispatch = useDispatch();
   const value = useSelector((state: RootState) => state.area.value);
   const [area, setArea] = useState(cityData);
-  //const [isTooltipToggled, setIsTooltipToggled] = useState(false);
-
   const handleChange = (value: string) => {
     setArea(
       cityData.filter((item) => {
@@ -154,7 +152,7 @@ function AoiList() {
                 </td>
                 <div
                   className='tooltip-box'
-                  //</>{"tooltip-box" + (isTooltipToggled ? " toggled" : "")}
+                  
                 >
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
