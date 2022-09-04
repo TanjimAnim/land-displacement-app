@@ -77,12 +77,12 @@ function NotificationWindow() {
             <div>Today</div>
             <div style={{ color: "#78A9FF" }}>Mark all as read</div>
           </NotificationDayBar>
-          {notification.map((item: any) => {
+          {notification.map((item: any, index) => {
             if (item.currentDay === day) {
               return (
-                <>
+                <div key={item.id + index}>
                   <ThemeProvider theme={item}>
-                    <NotificationMessage key={item.id}>
+                    <NotificationMessage>
                       <Container>
                         {(() => {
                           if (item.status === "info") {
@@ -134,19 +134,19 @@ function NotificationWindow() {
                       </div>
                     </NotificationMessage>
                   </ThemeProvider>
-                </>
+                </div>
               );
             }
           })}
           <NotificationDayBar>
             <div>Yesterday</div>
           </NotificationDayBar>
-          {notification.map((item: any) => {
+          {notification.map((item: any, index) => {
             if (item.currentDay === day - 1) {
               return (
-                <>
+                <div key={item.id + index}>
                   <ThemeProvider theme={item}>
-                    <NotificationMessage key={item.id}>
+                    <NotificationMessage>
                       <Container>
                         {(() => {
                           if (item.status === "info") {
@@ -198,19 +198,19 @@ function NotificationWindow() {
                       </div>
                     </NotificationMessage>
                   </ThemeProvider>
-                </>
+                </div>
               );
             }
           })}
           <NotificationDayBar>
             <div>Older</div>
           </NotificationDayBar>
-          {notification.map((item: any) => {
+          {notification.map((item: any, index) => {
             if (item.currentDay === day - 2) {
               return (
-                <>
+                <div key={item.id + index}>
                   <ThemeProvider theme={item}>
-                    <NotificationMessage key={item.id}>
+                    <NotificationMessage>
                       <Container>
                         {(() => {
                           if (item.status === "info") {
@@ -262,7 +262,7 @@ function NotificationWindow() {
                       </div>
                     </NotificationMessage>
                   </ThemeProvider>
-                </>
+                </div>
               );
             }
           })}
