@@ -68,7 +68,7 @@
 }
 
 .select {
-  border-left: 5px solid #0f62fe;
+  border-left: 2px solid #0f62fe;
 }
 .select-row {
   background-color: #343a3f;
@@ -85,7 +85,7 @@
 }
 
 .aoi-table tbody tr:hover td:nth-child(1) {
-  border-left: 5px solid #0f62fe;
+  border-left: 2px solid #0f62fe;
 }
 
 .aoi-table tbody tr:hover .tooltip-box {
