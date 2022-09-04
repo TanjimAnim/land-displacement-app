@@ -61,6 +61,12 @@
   padding: 1rem;
   cursor: pointer;
 }
+
+.aoi-table td:nth-child(5) {
+  padding: 0;
+  margin: 0;
+}
+
 .select {
   border-left: 5px solid #0f62fe;
 }

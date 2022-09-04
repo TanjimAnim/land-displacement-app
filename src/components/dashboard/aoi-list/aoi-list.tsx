@@ -54,6 +54,21 @@ const Input = styled.input`
   }
 `;
 
+const Tooltip = () => {
+  return (
+    <>
+      <div className='tooltip-box'>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+          sit eligendi quae rem, exercitationem at aut modi ut fugiat, odio
+          alias quaerat! Sed similique ut libero quos temporibus. Eaque, illum?
+        </p>
+        <p style={{ color: "#4589FF" }}>Learn more....</p>
+      </div>
+    </>
+  );
+};
+
 function AoiList() {
   const dispatch = useDispatch();
   const value = useSelector((state: RootState) => state.area.value);
@@ -88,7 +103,7 @@ function AoiList() {
           <tr>
             <th>Name</th>
             <th>Status</th>
-            <th colSpan={2}>Critical PS</th>
+            <th colSpan={3}>Critical PS</th>
           </tr>
         </thead>
         <tbody>
@@ -150,15 +165,9 @@ function AoiList() {
                     }
                   })()}
                 </td>
-                <div className='tooltip-box'>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus, sit eligendi quae rem, exercitationem at aut modi
-                    ut fugiat, odio alias quaerat! Sed similique ut libero quos
-                    temporibus. Eaque, illum?
-                  </p>
-                  <p style={{ color: "#4589FF" }}>Learn more....</p>
-                </div>
+                <td>
+                  <Tooltip />
+                </td>
               </tr>
             );
           })}
