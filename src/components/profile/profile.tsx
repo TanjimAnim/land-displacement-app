@@ -23,7 +23,7 @@ const ProfileMenuWrapper = styled.div`
   padding-left: 16px;
   padding-right: 18px;
   transform: ${(props) =>
-    props.theme.isOpen ? "translateX(5px)" : "translateX(-109%)"};
+    props.theme.isOpen ? "translateX(0px)" : "translateX(-109%)"};
   transition: transform 0.5s ease-out;
 `;
 
