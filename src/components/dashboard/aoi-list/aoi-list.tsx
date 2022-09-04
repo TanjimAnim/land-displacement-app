@@ -58,6 +58,7 @@ function AoiList() {
   const dispatch = useDispatch();
   const value = useSelector((state: RootState) => state.area.value);
   const [area, setArea] = useState(cityData);
+
   const handleChange = (value: string) => {
     setArea(
       cityData.filter((item) => {
@@ -95,9 +96,8 @@ function AoiList() {
             return (
               <tr
                 onClick={() => dispatch(addArea(item))}
-                // onMouseEnter={() => setIsTooltipToggled(true)}
-                // onMouseLeave={() => setIsTooltipToggled(false)}
                 className={value.id === item.id ? "select-row" : ""}
+                key={`${item.id}`}
               >
                 <td className={value.id === item.id ? "select" : ""}>
                   {item.name}
@@ -150,10 +150,7 @@ function AoiList() {
                     }
                   })()}
                 </td>
-                <div
-                  className='tooltip-box'
-                  
-                >
+                <div className='tooltip-box'>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Accusamus, sit eligendi quae rem, exercitationem at aut modi
