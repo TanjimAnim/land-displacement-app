@@ -101,18 +101,17 @@
   font-size: 14px;
 }
 
-.tooltip-box.toggled {
-  visibility: visible;
+.aoi-table tbody tr:nth-child(10):hover .tooltip-box,
+.aoi-table tbody tr:nth-child(11):hover .tooltip-box,
+.aoi-table tbody tr:nth-child(12):hover .tooltip-box {
+  top: -160px;
 }
 
 .aoi-table tr th {
   text-align: left;
 }
 
-.aoi-table tr th:nth-child(2) {
-  text-align: center;
-}
-
+.aoi-table tr th:nth-child(2),
 .aoi-table tr th:nth-child(3) {
   text-align: center;
 }
