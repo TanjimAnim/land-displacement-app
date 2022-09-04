@@ -8,6 +8,7 @@ This project is made with
 3. HTML
 4. CSS
 5. Styled Components
+6. Redux Toolkit
 
 **Setup**
 To run this project,
