@@ -24,7 +24,7 @@ const year: number = today.getFullYear();
 const time: string =
   today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-const currentDate: string = `${month} ${day},${year} ${time}`;
+export const currentDate: string = `${month} ${day},${year} ${time}`;
 const previousDate: string = `${month} ${day - 1},${year} ${time}`;
 const olderDate: string = `${month} ${day - 2},${year} ${time}`;
 
