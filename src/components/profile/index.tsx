@@ -15,6 +15,7 @@ import type { RootState } from "../../app/store";
 import { useState } from "react";
 
 const ProfileMenuWrapper = styled.div`
+  z-index: 1;
   background-color: #121619;
   width: 360px;
   position: absolute;
@@ -28,6 +29,7 @@ const ProfileMenuWrapper = styled.div`
 `;
 
 const MenuIcon = styled.div`
+  z-index: 1;
   background-color: black;
   color: white;
   position: absolute;
@@ -44,6 +46,7 @@ const MenuIcon = styled.div`
 `;
 
 const Wrapper = styled.div`
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   position: absolute;
