@@ -1,11 +1,3 @@
 #root > div > div.display-pages > div > div > div.mapboxgl-control-container {
   display: none;
 }
-
-.mapboxgl-canvas {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}

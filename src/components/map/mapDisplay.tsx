@@ -41,6 +41,7 @@ function MapDisplay() {
       setZoom(map.current.getZoom().toFixed(2));
     });
   });
+
   return (
     <>
       {area.length === 0 ? (
