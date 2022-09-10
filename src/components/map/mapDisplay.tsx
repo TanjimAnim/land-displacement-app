@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import * as mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 import "./mapDisplay.css";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../app/store";
