@@ -1,9 +1,9 @@
 import "./App.css";
-import Sidebar from "./components/sidebar/sidebar";
-import Dashboard from "./components/dashboard/dashboard";
-import Map from "./components/map/map";
-import Profile from "./components/profile/profile";
-import Download from "./components/download/download";
+import Sidebar from "./components/sidebar";
+import Dashboard from "./components/dashboard";
+import Map from "./components/map";
+import Profile from "./components/profile";
+import Download from "./components/download";
 import { Routes, Route } from "react-router-dom";
 
 function App() {

@@ -1,8 +1,8 @@
-import Topbar from "./topbar/topbar";
-import AoiList from "./aoi-list/aoi-list";
-import AoiSummary from "./aoi-summary/aoi-summary";
-import AreaGraphs from "./aoi-graphs/aoi-graphs";
-import AreaSummary from "./area-summary/area-summary";
+import Topbar from "./topbar";
+import AoiList from "./aoi-list";
+import AoiSummary from "./aoi-summary";
+import AreaGraphs from "./aoi-graphs";
+import AreaSummary from "./area-summary";
 import "./dashboard.css";
 function Dashboard() {
   return (

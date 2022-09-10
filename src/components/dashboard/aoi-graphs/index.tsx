@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../../app/store";
-import SlopeValue from "../aoi-graphs/slopevalue/slopevalue";
-import Overview from "./slopevalue/overview/overview";
+import SlopeValue from "./slopevalue";
+import Overview from "./slopevalue/overview";
 import styled from "styled-components";
 
 const Title = styled.div`
