@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Location } from "@styled-icons/entypo/Location";
 import { ThemeProvider } from "styled-components";
+import { Link } from "react-router-dom";
 
 const Title = styled.div`
   font-weight: 400;
@@ -44,6 +45,7 @@ const MapDisplay = styled.div`
   margin-top: ${(props) => props.theme.marginTop}; ;
 `;
 
+//component for showing graph options
 function TimePeriod({ theme }: { theme: object }) {
   return (
     <>
@@ -61,7 +63,10 @@ function TimePeriod({ theme }: { theme: object }) {
           </Select>
 
           <MapDisplay>
-            <p>View In Map</p>
+            <Link to='/profile' style={{ textDecoration: "none" }}>
+              <p style={{ color: "white" }}>View In Map</p>
+            </Link>
+
             <Location style={{ width: "16px" }} />
           </MapDisplay>
         </TimePeriodStyle>
