@@ -2,12 +2,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeNotification } from "../../features/slice";
 import type { RootState } from "../../app/store";
 import styled from "styled-components";
+import { ThemeProvider } from "styled-components";
+
+//importing icons
 import { InfoCircleFill } from "@styled-icons/bootstrap/InfoCircleFill";
 import { ErrorCircle } from "@styled-icons/fluentui-system-filled/ErrorCircle";
 import { ErrorWarning } from "@styled-icons/remix-fill/ErrorWarning";
 import { CircleCheck } from "@styled-icons/open-iconic/CircleCheck";
 import { CloseOutline } from "@styled-icons/evaicons-outline/CloseOutline";
-import { ThemeProvider } from "styled-components";
 
 const Wrapper = styled.div`
   width: 309px;
@@ -54,6 +56,7 @@ const Container = styled.div`
   color: black;
 `;
 
+//component to display notification messages
 function NotificationWindow() {
   const dispatch = useDispatch();
   const notification: object[] = useSelector(

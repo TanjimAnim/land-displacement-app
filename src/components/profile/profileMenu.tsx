@@ -30,6 +30,7 @@ const DotIcon = styled.div`
   }};
 `;
 
+//the sliding menu component of profile page
 function ProfileMenu(props: any) {
   const value = useSelector((state: RootState) => state.area.value);
   return (

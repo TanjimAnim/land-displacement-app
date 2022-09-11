@@ -1,5 +1,6 @@
 import ReactEcharts from "echarts-for-react";
 
+//graph component of multiple lines for overview section
 function StackedGraph() {
   const option = {
     tooltip: {

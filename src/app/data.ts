@@ -1,3 +1,5 @@
+//data of areas
+
 export const cityData: {
   id: number;
   name: string;

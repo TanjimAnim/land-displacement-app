@@ -19,6 +19,7 @@ const Title = styled.div`
 (mapboxgl as typeof mapboxgl).accessToken =
   "pk.eyJ1IjoidGFuamltYW5pbSIsImEiOiJjbDdoc242eXAwMDg1M29tZzBtbzcxbW13In0.VZ1fj0f8TE1wv62sYESfMQ";
 
+//map display component
 function MapDisplay() {
   const area: any = useSelector((state: RootState) => state.area.value);
   const mapContainer = useRef(null);

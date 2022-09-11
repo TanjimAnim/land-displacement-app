@@ -12,6 +12,9 @@ const Title = styled.div`
   margin-left: 40px;
 `;
 
+//component for showing detailed graphs
+//such as overview,horizontal etc.
+
 function AreaGraphs() {
   const link = useSelector((state: RootState) => state.area.selectedLink);
   const area = useSelector((state: RootState) => state.area);

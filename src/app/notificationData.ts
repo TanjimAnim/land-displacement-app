@@ -1,3 +1,6 @@
+//notification data
+
+//month declaration for displaying the mentioned date format
 const monthNames: string[] = [
   "Jan.",
   "Feb.",

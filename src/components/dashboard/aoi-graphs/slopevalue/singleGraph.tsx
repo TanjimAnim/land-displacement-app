@@ -2,6 +2,7 @@ import ReactEcharts from "echarts-for-react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../app/store";
 
+//graph component for showing a single graph for horizontal,vertical etc components
 function SingleGraph() {
   const link = useSelector((state: RootState) => state.area.selectedLink);
   var lineColor: string = "";

@@ -2,6 +2,7 @@ import { cityData } from "../../../app/data";
 import ReactEcharts from "echarts-for-react";
 import "./aoi-summary.css";
 
+//component for displaying pie chart and other data
 function AoiSummary() {
   var criticalCount: object[] = cityData.filter(
     (item) => item.status.toLowerCase() === "critical"

@@ -12,6 +12,7 @@ const Title = styled.div`
   height: 100vh;
 `;
 
+//component for displaying map route
 function Map() {
   const value = useSelector((state: RootState) => state.area.value);
 

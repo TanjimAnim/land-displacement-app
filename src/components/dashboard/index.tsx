@@ -1,9 +1,12 @@
+//importing components
 import Topbar from "./topbar";
 import AoiList from "./aoi-list";
 import AoiSummary from "./aoi-summary";
 import AreaGraphs from "./aoi-graphs";
 import AreaSummary from "./area-summary";
 import "./dashboard.css";
+
+//dashboard component
 function Dashboard() {
   return (
     <>

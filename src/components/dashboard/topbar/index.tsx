@@ -1,6 +1,8 @@
 import "./topbar.css";
 import { currentDate } from "../../../app/notificationData";
 
+//topbar component of dashboard
+
 function Topbar() {
   return (
     <div id='topbar' className='topbar'>

@@ -44,6 +44,7 @@ const TimePeriodWrapper = styled.div`
   margin-right: 0.5%;
 `;
 
+//component for showing the detailed graphs of the selected AOI
 function SlopeValue({
   title,
   maxUp,

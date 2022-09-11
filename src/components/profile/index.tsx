@@ -1,11 +1,12 @@
 import styled from "styled-components";
-
+//importing icons
 import { Search } from "@styled-icons/bootstrap/Search";
 import { UserCircle } from "@styled-icons/fa-regular/UserCircle";
 import { Bell } from "@styled-icons/bootstrap/Bell";
 import { ThemeProvider } from "styled-components";
 import { Menu } from "@styled-icons/boxicons-regular/Menu";
 
+//importing components
 import NotificationWindow from "./notification";
 import ProfileMenu from "./profileMenu";
 import MapDisplay from "../map/mapDisplay";
@@ -150,6 +151,7 @@ const MapTitle = styled.div`
   height: 100vh;
 `;
 
+//component to display profile route
 function Profile() {
   const value = useSelector((state: RootState) => state.area.value);
   const notification: object[] = useSelector(

@@ -29,6 +29,7 @@ const Value = styled.div`
   color: #ffffff;
 `;
 
+//graph component for showing graph of multiple line for horizontal,vertical etc components
 function MultiGraph() {
   var colorPalette1: string[] = ["#DA1E28", "#878D96", "#878D96"];
   var colorPalette2: string[] = ["#878D96", "#F1C21B", "#878D96"];

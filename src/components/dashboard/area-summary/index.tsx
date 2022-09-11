@@ -1,10 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../app/store";
-import "./area-summary.css";
-import { Dot } from "@styled-icons/bootstrap/Dot";
-import { EditAlt } from "@styled-icons/boxicons-regular/EditAlt";
 import { setSelectedLink } from "../../../features/slice";
 
+import "./area-summary.css";
+
+//importing icons
+import { Dot } from "@styled-icons/bootstrap/Dot";
+import { EditAlt } from "@styled-icons/boxicons-regular/EditAlt";
+
+//component for displaying data of selected AOI
 function AreaSummary() {
   const area = useSelector((state: RootState) => state.area);
   const link = useSelector((state: RootState) => state.area.selectedLink);

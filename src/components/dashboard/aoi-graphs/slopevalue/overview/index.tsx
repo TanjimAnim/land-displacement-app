@@ -57,6 +57,7 @@ const RightGrid = styled.div`
   padding-right: 16px;
 `;
 
+//component for showing the overview section of AOI
 function Overview() {
   return (
     <>

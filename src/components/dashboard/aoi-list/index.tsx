@@ -4,13 +4,14 @@ import { useDispatch } from "react-redux";
 import { addArea } from "../../../features/slice";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../app/store";
+import { useState } from "react";
 
+//importing icons
 import styled from "styled-components";
 import { Search } from "@styled-icons/bootstrap/Search";
 import { Dot } from "@styled-icons/bootstrap/Dot";
 import { DownArrowAlt } from "@styled-icons/boxicons-regular/DownArrowAlt";
 import { UpArrowAlt } from "@styled-icons/boxicons-regular/UpArrowAlt";
-import { useState } from "react";
 
 const SearchBar = styled.div`
   &.inputWithIcon {
@@ -54,6 +55,7 @@ const Input = styled.input`
   }
 `;
 
+//tooltip component
 const Tooltip = () => {
   return (
     <>
@@ -69,6 +71,7 @@ const Tooltip = () => {
   );
 };
 
+//component for showing the list of the AOIs
 function AoiList() {
   const dispatch = useDispatch();
   const value = useSelector((state: RootState) => state.area.value);
