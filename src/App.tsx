@@ -5,6 +5,7 @@ import Map from "./components/map";
 import Profile from "./components/profile";
 import Download from "./components/download";
 import { Routes, Route } from "react-router-dom";
+import NotFound from "./components/notFound";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='map' element={<Map />} />
           <Route path='profile' element={<Profile />} />
           <Route path='download' element={<Download />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
     </div>
