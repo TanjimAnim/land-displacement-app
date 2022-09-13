@@ -1,6 +1,6 @@
 //data of areas
 
-export const cityData: {
+type Area = {
   id: number;
   name: string;
   status: string;
@@ -10,7 +10,9 @@ export const cityData: {
   size: number;
   lat: number;
   long: number;
-}[] = [
+};
+
+export const cityData: Area[] = [
   {
     id: 1,
     name: "Kansai Airport",
