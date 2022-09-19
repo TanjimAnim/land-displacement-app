@@ -11,23 +11,23 @@ function Sidebar() {
   return (
     <div className='sidebar'>
       <div className='top-items'>
-        <img src={synspectiveIcon} />
+        <img src={synspectiveIcon} alt='' />
         <Link to='/'>
-          <img src={dashboardIcon} />
+          <img src={dashboardIcon} alt='' />
         </Link>
 
         <Link to='map'>
-          <img src={mapIcon} />
+          <img src={mapIcon} alt='' />
         </Link>
         <Link to='download'>
-          <img src={downloadIcon} />
+          <img src={downloadIcon} alt='' />
         </Link>
         <Link to='/profile'>
-          <img src={userProfileIcon} />
+          <img src={userProfileIcon} alt='' />
         </Link>
       </div>
       <div className='bottom-items'>
-        <img src={logoutIcon} />
+        <img src={logoutIcon} alt='' />
       </div>
     </div>
   );
