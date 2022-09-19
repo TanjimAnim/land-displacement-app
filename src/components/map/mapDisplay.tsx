@@ -24,8 +24,8 @@ function MapDisplay() {
   const area: any = useSelector((state: RootState) => state.area.value);
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [long, setLong] = useState(area.long);
-  const [lat, setLat] = useState(area.lat);
+  const long = area.long;
+  const lat = area.lat;
   const [zoom, setZoom] = useState(12);
   useEffect(() => {
     if (map.current) return; // initialize map only once
