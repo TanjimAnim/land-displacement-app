@@ -1,11 +1,17 @@
-import { useRef, useEffect, useState } from "react";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import * as mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./mapDisplay.css";
+
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass =
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+
 import { useSelector } from "react-redux";
 import type { RootState } from "../../app/store";
 import styled from "styled-components";
+import { useRef, useEffect, useState } from "react";
 
 const Title = styled.div`
   display: flex;
