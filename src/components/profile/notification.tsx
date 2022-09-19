@@ -80,10 +80,13 @@ function NotificationWindow() {
             <div>Today</div>
             <div style={{ color: "#78A9FF" }}>Mark all as read</div>
           </NotificationDayBar>
-          {notification.map((item: any, index) => {
-            if (item.currentDay === day) {
+          {notification
+            .filter((element: any) => {
+              return element.currentDay === day;
+            })
+            .map((item: any) => {
               return (
-                <div key={item.id + index}>
+                <div key={item.id}>
                   <ThemeProvider theme={item}>
                     <NotificationMessage>
                       <Container>
@@ -139,15 +142,17 @@ function NotificationWindow() {
                   </ThemeProvider>
                 </div>
               );
-            }
-          })}
+            })}
           <NotificationDayBar>
             <div>Yesterday</div>
           </NotificationDayBar>
-          {notification.map((item: any, index) => {
-            if (item.currentDay === day - 1) {
+          {notification
+            .filter((element: any) => {
+              return element.currentDay === day - 1;
+            })
+            .map((item: any) => {
               return (
-                <div key={item.id + index}>
+                <div key={item.id}>
                   <ThemeProvider theme={item}>
                     <NotificationMessage>
                       <Container>
@@ -203,15 +208,17 @@ function NotificationWindow() {
                   </ThemeProvider>
                 </div>
               );
-            }
-          })}
+            })}
           <NotificationDayBar>
             <div>Older</div>
           </NotificationDayBar>
-          {notification.map((item: any, index) => {
-            if (item.currentDay === day - 2) {
+          {notification
+            .filter((element: any) => {
+              return element.currentDay === day - 2;
+            })
+            .map((item: any) => {
               return (
-                <div key={item.id + index}>
+                <div key={item.id}>
                   <ThemeProvider theme={item}>
                     <NotificationMessage>
                       <Container>
@@ -267,8 +274,7 @@ function NotificationWindow() {
                   </ThemeProvider>
                 </div>
               );
-            }
-          })}
+            })}
           <NotificationDayBar />
         </Wrapper>
       )}
