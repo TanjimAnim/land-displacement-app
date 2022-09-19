@@ -1,6 +1,7 @@
 **Land Displacement App**
 
-Admin dashboard made with React, Typescript and Redux toolkit. 
+Admin dashboard made with React, Typescript and Redux toolkit. <br>
+Live Link: https://admin-dashboard-land-displacement.netlify.app/
 
 N.B: this is not mobile responsive yet. Please view it on your desktop
 **Technology**
