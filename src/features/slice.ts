@@ -25,7 +25,7 @@ export const areaSlice = createSlice({
     },
     removeNotification: (state, action) => {
       state.notification = state.notification.filter((item: any) => {
-        return item.id != action.payload;
+        return item.id !== action.payload;
       });
     },
   },
