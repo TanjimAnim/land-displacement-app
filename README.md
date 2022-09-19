@@ -3,7 +3,7 @@
 Admin dashboard made with React, Typescript and Redux toolkit. <br>
 Live Link: https://admin-dashboard-land-displacement.netlify.app/
 
-N.B: this is not mobile responsive yet. Please view it on your desktop
+N.B: this is not mobile responsive yet. Please view it on your desktop <br>
 **Technology**
 This project is made with
 
