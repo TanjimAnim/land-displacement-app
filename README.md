@@ -1,5 +1,8 @@
 **Land Displacement App**
 
+Admin dashboard made with React, Typescript and Redux toolkit. 
+
+N.B: this is not mobile responsive yet. Please view it on your desktop
 **Technology**
 This project is made with
 
